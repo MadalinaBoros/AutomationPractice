@@ -1,5 +1,6 @@
 package Tests;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,25 +16,25 @@ public class LoginTest {
 
    @Test
     public void TestAutomat(){
-       //Specificam unde se afla Driverul pentru browser
+    //Specificam unde se afla Driverul pentru browser
        System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver.exe");
 
-       //Deschidem un browser
+    //Deschidem un browser
        driver = new ChromeDriver();
 
-       //Introducem o adresa
+    //Introducem o adresa
       driver.get("http://demo.automationtesting.in/Index.html");
 
-      //Schimbam rezolutia la mare, tot timpul alegem maximize
+    //Schimbam rezolutia la mare, tot timpul alegem maximize
       driver.manage().window().maximize();
 
-      //Identificam elementul sign in
+    //Identificam elementul sign in
       WebElement SignInElement = driver.findElement(By.id("btn1"));
 
-      //Facem un click
+    //Facem un click
       SignInElement.click();
 
-      //identificare element dupa locaters, id, class, name, link, css, xpath
+    //identificare element dupa locaters, id, class, name, link, css, xpath
 
     WebElement EmailElement = driver.findElement(By.cssSelector("input[placeholder='E mail']"));
     String EmailValue = "ceva@ceva.com";
@@ -45,9 +46,11 @@ public class LoginTest {
     WebElement EnterElement = driver.findElement(By.id("enterbtn"));
     EnterElement.click();
 
-
-
     //css to xpath => input[placeholder='E mail'] => //input[@placeholder='E mail']
+    WebElement EroareElement = driver.findElement(By.id("errormsg"));
+    String ExpectedError = " Invalid User Name or PassWord";
+    String ActualError = EroareElement.getText();
+    Assert.assertEquals("MESAJUL DE PE PAGINA NU ESTE CORECT",ExpectedError, ActualError);
 
 
 
