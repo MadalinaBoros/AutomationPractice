@@ -1,5 +1,6 @@
 package Tests;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,6 +34,11 @@ public class RegisterTest {
         //Skip sign in element si click
         WebElement SkipSignInElement = driver.findElement(By.id("btn2"));
         SkipSignInElement.click();
+
+        //Validam pagina de register
+        String ActualRegister = driver.getTitle();
+        Assert.assertEquals("Register", ActualRegister);
+
 
         //First name
         WebElement FirstNameElement = driver.findElement(By.cssSelector("input[placeholder='First Name']"));
@@ -71,12 +77,20 @@ public class RegisterTest {
             }
         }
         GenderElement.click();
-    }
 
         //Adresa
         WebElement AdresaElement = driver.findElement(By.cssSelector("textarea[ng-model='Adress']"));
         String AdresaElementValoare = "Cluj nr 36";
-        AdresaElement.sendKeys(AdresaElementValoare)
+        AdresaElement.sendKeys(AdresaElementValoare);
+
+        //Parola
+        WebElement ParolaElement = driver.findElement(By.id("firstpassword"));
+        String ParolaElementValoare = "parolaculiteremici";
+        ParolaElement.sendKeys(ParolaElementValoare);
+
+
+
+    }
 
 
 }
