@@ -10,7 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LoginTest {
     //Selenium functioneaza pe doua concepte interactiune cu browsere pe care trebuie sa le cream
     //Webdriver= variabila care ne ajuta sa interactionam cu site-ul si elementele din site
-
+    //punctul inaintea cautarii  este echivalentul cautarii dupa clasa
+    // pentru butonul de search apasam ctrl f
 
    public WebDriver driver;
 
@@ -25,7 +26,7 @@ public class LoginTest {
     //Introducem o adresa
       driver.get("http://demo.automationtesting.in/Index.html");
 
-    //Schimbam rezolutia la mare, tot timpul alegem maximize
+    //Schimbam rezolutia la mare, tot timpul alegem maximize, la full screen nu avem butonul de X si punere in bara
       driver.manage().window().maximize();
 
     //Identificam elementul sign in
