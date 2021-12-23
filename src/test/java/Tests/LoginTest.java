@@ -38,7 +38,7 @@ public class LoginTest {
     //identificare element dupa locaters, id, class, name, link, css, xpath
 
     WebElement EmailElement = driver.findElement(By.cssSelector("input[placeholder='E mail']"));
-    String EmailValue = "ceva@ceva.com";
+    String EmailValue = "boros.madalina95@yahoo.com";
     EmailElement.sendKeys(EmailValue);
 
     WebElement ParolaElement = driver.findElement(By.xpath("//input[@placeholder='Password']"));
