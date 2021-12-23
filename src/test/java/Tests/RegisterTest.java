@@ -137,6 +137,8 @@ public class RegisterTest {
         WebElement RefreshElement = driver.findElement(By.id("Button1"));
         RefreshElement.click();
 
+        //un comentariu
+
 
     }
 
