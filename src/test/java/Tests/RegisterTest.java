@@ -40,102 +40,102 @@ public class RegisterTest {
         SkipSignInElement.click();
 
         //Validam pagina de register
-        String ActualRegister = driver.getTitle();
-        Assert.assertEquals("Register", ActualRegister);
+        String actualRegister = driver.getTitle();
+        Assert.assertEquals("Register", actualRegister);
 
 
         //First name
-        WebElement FirstNameElement = driver.findElement(By.cssSelector("input[placeholder='First Name']"));
-        String FirstNameElementValue = "Madalina";
-        FirstNameElement.sendKeys(FirstNameElementValue);
+        WebElement firstNameElement = driver.findElement(By.cssSelector("input[placeholder='First Name']"));
+        String firstNameElementValue = "Madalina";
+        firstNameElement.sendKeys(firstNameElementValue);
 
         //Last name
-        WebElement LastNameElement = driver.findElement(By.cssSelector("input[placeholder='Last Name']"));
-        String LastNameValue = "Boros";
-        LastNameElement.sendKeys(LastNameValue);
+        WebElement lastNameElement = driver.findElement(By.cssSelector("input[placeholder='Last Name']"));
+        String lastNameValue = "Boros";
+        lastNameElement.sendKeys(lastNameValue);
 
         //Adresa
-        WebElement AdresaElement = driver.findElement(By.cssSelector("textarea[ng-model='Adress']"));
+        WebElement adresaElement = driver.findElement(By.cssSelector("textarea[ng-model='Adress']"));
         String AdresaElementValoare = "Cluj nr 36";
-        AdresaElement.sendKeys(AdresaElementValoare);
+        adresaElement.sendKeys(AdresaElementValoare);
 
         //Email address
-        WebElement EmailAddressElement = driver.findElement(By.cssSelector("input[type='email']"));
-        String EmailAddressValue = "boros.madalina95@yahoo.com";
-        EmailAddressElement.sendKeys(EmailAddressValue);
+        WebElement emailAddressElement = driver.findElement(By.cssSelector("input[type='email']"));
+        String emailAddressValue = "boros.madalina95@yahoo.com";
+        emailAddressElement.sendKeys(emailAddressValue);
 
         //Nr de telefon
-        WebElement PhoneNumberElement = driver.findElement(By.cssSelector("input[ng-model=\"Phone\"]"));
-        String PhoneNumberValue = "0729666666";
-        PhoneNumberElement.sendKeys(PhoneNumberValue);
+        WebElement phoneNumberElement = driver.findElement(By.cssSelector("input[ng-model=\"Phone\"]"));
+        String phoneNumberValue = "0729666666";
+        phoneNumberElement.sendKeys(phoneNumberValue);
 
         //Genul
-        WebElement GenderElement = driver.findElement(By.cssSelector("input[value='FeMale']"));
-        GenderElement.click();
+        WebElement genderElement = driver.findElement(By.cssSelector("input[value='FeMale']"));
+        genderElement.click();
 
         //Hobby
-        WebElement HobbyElement = driver.findElement(By.id("checkbox3"));
-        HobbyElement.click();
+        WebElement hobbyElement = driver.findElement(By.id("checkbox3"));
+        hobbyElement.click();
 
         //Day
-        WebElement DayElement = driver.findElement(By.id("daybox"));
-        Select DaySelect = new Select(DayElement);
-        DaySelect.selectByValue("12");
+        WebElement dayElement = driver.findElement(By.id("daybox"));
+        Select daySelect = new Select(dayElement);
+        daySelect.selectByValue("12");
 
         //Language
-        WebElement LanguageElement = driver.findElement(By.id("msdd"));
-        LanguageElement.click();
-        List<WebElement> LanguageElements = driver.findElements(By.xpath("//li[@class='ng-scope']/a"));
-        for (Integer i = 0; i < LanguageElements.size(); i++){
-            if (LanguageElements.get(i).getText().equals("Bulgarian")){
-                LanguageElements.get(i).click();
+        WebElement languageElement = driver.findElement(By.id("msdd"));
+        languageElement.click();
+        List<WebElement> languageElements = driver.findElements(By.xpath("//li[@class='ng-scope']/a"));
+        for (Integer i = 0; i < languageElements.size(); i++){
+            if (languageElements.get(i).getText().equals("Bulgarian")){
+                languageElements.get(i).click();
                 break;
             }
         }
-        GenderElement.click();
+        genderElement.click();
 
         //Skills
-        WebElement SkillsElement = driver.findElement(By.id("Skills"));
-        Select SkillsSelect = new Select(SkillsElement);
-        SkillsSelect.selectByVisibleText("Android");
+        WebElement skillsElement = driver.findElement(By.id("Skills"));
+        Select skillsSelect = new Select(skillsElement);
+        skillsSelect.selectByVisibleText("Android");
 
         //Country
-        WebElement CountryElement = driver.findElement(By.id("countries"));
-        CountryElement.click();
+        WebElement countryElement = driver.findElement(By.id("countries"));
+        countryElement.click();
 
         //Select country nu functioneaza
 
         //Year
-        WebElement YearElement = driver.findElement(By.id("yearbox"));
-        Select YearSelect = new Select(YearElement);
-        YearSelect.selectByValue("1999");
+        WebElement yearElement = driver.findElement(By.id("yearbox"));
+        Select yearSelect = new Select(yearElement);
+        yearSelect.selectByValue("1999");
 
         //Month
-        WebElement MonthElement = driver.findElement(By.cssSelector("select[placeholder='Month']"));
-        Select MonthSelect = new Select(MonthElement);
-        MonthSelect.selectByValue("March");
+        WebElement monthElement = driver.findElement(By.cssSelector("select[placeholder='Month']"));
+        Select monthSelect = new Select(monthElement);
+        monthSelect.selectByValue("March");
 
         //Parola
-        WebElement PasswordElement = driver.findElement(By.id("firstpassword"));
-        String PasswordElementValue = "parolaculiteremici";
-        PasswordElement.sendKeys(PasswordElementValue);
+        WebElement passwordElement = driver.findElement(By.id("firstpassword"));
+        String passwordElementValue = "parolaculiteremici";
+        passwordElement.sendKeys(passwordElementValue);
 
         //Confirmare parola
-        WebElement ConfirmPasswordElement = driver.findElement(By.id("secondpassword"));
-        String ConfirmPasswordElementValue = "parolaculiteremici";
-        ConfirmPasswordElement.sendKeys(ConfirmPasswordElementValue);
+        WebElement confirmPasswordElement = driver.findElement(By.id("secondpassword"));
+        String confirmPasswordElementValue = "parolaculiteremici";
+        confirmPasswordElement.sendKeys(confirmPasswordElementValue);
 
         //Submit button
-        WebElement SubmitElement = driver.findElement(By.id("submitbtn"));
-        SubmitElement.click();
+        WebElement submitElement = driver.findElement(By.id("submitbtn"));
+        submitElement.click();
 
         //Photo
-        WebElement PhotoElement = driver.findElement(By.id("imagesrc"));
-        PhotoElement.sendKeys("C:\\Users\\UltraBook\\Desktop\\download.jpg");
+        WebElement photoElement = driver.findElement(By.id("imagesrc"));
+        photoElement.sendKeys("C:\\Users\\UltraBook\\Desktop\\download.jpg");
 
         //Refresh button
-        WebElement RefreshElement = driver.findElement(By.id("Button1"));
-        RefreshElement.click();
+        WebElement refreshElement = driver.findElement(By.id("Button1"));
+        refreshElement.click();
 
         //un comentariu
 
